@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/txtLab"
+            android:text="LABORATORIO"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="30dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerLab"
+            android:entries="@array/laboratorios"
+            android:prompt="@string/preservation_prompt"
+            android:spinnerMode="dialog"
+            android:layout_alignBaseline="@id/txtLab"
+            android:layout_width="175dp"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/txtLab"/>
+
+        <TextView
+            android:id="@+id/txtRut"
+            android:text="RUT"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:layout_alignStart="@id/txtLab"
+            android:layout_below="@id/txtLab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/inpRut"
+            android:inputType="text"
+            android:maxLength="9"
+            android:gravity="center"
+            android:hint="RUT sin guion"
+            android:layout_alignBaseline="@id/txtRut"
+            android:layout_alignStart="@id/spinnerLab"
+            android:layout_width="175dp"
+            android:layout_height="35dp"
+            android:background="@drawable/edit_text_borde" />
+
+        <TextView
+            android:id="@+id/txtNombre"
+            android:text="NOMBRE"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_alignStart="@id/txtRut"
+            android:layout_below="@id/txtRut"
+ />
+
+        <EditText
+            android:id="@+id/inpNombre"
+            android:inputType="text"
+            android:hint="Nombre"
+            android:layout_width="175dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_alignBaseline="@id/txtNombre"
+            android:layout_alignStart="@id/spinnerLab"
+            android:background="@drawable/edit_text_borde" />
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:text="DESCRIPCIÓN"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txtNombre"/>
+
+        <EditText
+            android:id="@+id/inpDesc"
+            android:inputType="textMultiLine"
+            android:gravity="top|left"
+            android:scrollbars="vertical"
+            android:background="@drawable/edit_text_borde"
+            android:layout_width="fill_parent"
+            android:layout_marginHorizontal="45dp"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/txtDesc"/>
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:text="Grabar incidente"
+            android:textSize="20sp"
+            android:backgroundTint="#34d82a"
+            android:layout_marginTop="55dp"
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/inpDesc"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+</ScrollView>
